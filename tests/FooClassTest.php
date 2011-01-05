@@ -20,6 +20,8 @@ class FooClassTest extends PHPUnit_Framework_TestCase {
         $foo = new Foo();
         $result = $foo($this->a, $this->b);
         $this->assertEquals($this->answer, $result);
+        
+        $this->assertTrue(FALSE, "This will fucking fail.");
     }
     
 }
