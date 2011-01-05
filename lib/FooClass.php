@@ -18,21 +18,21 @@ class Foo {
     
     /**
      * functor pattern
-     * @param int $a
-     * @param int $b
+     * @param int $intOne
+     * @param int $intTwo
      * @return int 
      */
-    public function __invoke($a, $b) {
+    public function __invoke($intOne, $intTwo) {
         return $this->mul($a, $b);
     }
     
     /**
      * multiplication, complicated
-     * @param int $a
-     * @param int $b
+     * @param int $intOne
+     * @param int $intTwo
      * @return int 
      */
-    function mul($a, $b) {
+    function mul($intOne, $intTwo) {
         return $a * $b;
     }
 }
