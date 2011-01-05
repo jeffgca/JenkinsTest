@@ -35,8 +35,7 @@
   <exec executable="pdepend">
    <arg line="--jdepend-xml=${basedir}/build/logs/jdepend.xml
               --jdepend-chart=${basedir}/build/pdepend/dependencies.svg
-              --overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg
-              lib" />
+              --overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg"/>
   </exec>
  </target>
 
@@ -50,7 +49,7 @@
  <!-- Generate clover.xml -->
  <target name="phpcov">
   <exec executable="phpmd">
-   <arg line="--clover lib/*" />
+   <arg line="--whitelist lib --clover build/logs/clover.xml main.php"/>
   </exec>
  </target>
 
