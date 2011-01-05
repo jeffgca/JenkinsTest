@@ -23,7 +23,7 @@ class Foo {
      * @return int 
      */
     public function __invoke($intOne, $intTwo) {
-        return $this->mul($a, $b);
+        return $this->mul($intOne, $intTwo);
     }
     
     /**
@@ -33,6 +33,6 @@ class Foo {
      * @return int 
      */
     function mul($intOne, $intTwo) {
-        return $a * $b;
+        return $intOne * $intTwo;
     }
 }
