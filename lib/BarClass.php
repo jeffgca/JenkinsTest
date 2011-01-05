@@ -26,8 +26,8 @@ class BarClass extends PDO {
      */
     public function getRows($table, $limit=10) {
         $sql = "SELECT * FROM $table LIMIT $limit";
-        $sh = $this->query($sql);
-        return $sh->fetchAll();
+        $statement = $this->query($sql);
+        return $statement->fetchAll();
     }
 }
 
