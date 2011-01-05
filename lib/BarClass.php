@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @package Bar
+ * @global SOme classes in Bar. BOOSH.
+ */
+
 /*
  * class BarClass
  * @package Bar

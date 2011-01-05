@@ -26,6 +26,7 @@
    <antcall target="phpcpd"/>
    <antcall target="phpcs"/>
    <antcall target="phpdoc"/>
+   <antcall target="phpcov"/>
   </parallel>
  </target>
 
@@ -43,6 +44,13 @@
  <target name="phpmd">
   <exec executable="phpmd">
    <arg line="lib xml codesize,design,naming,unusedcode --reportfile ${basedir}/build/logs/pmd.xml" />
+  </exec>
+ </target>
+ 
+ <!-- Generate clover.xml -->
+ <target name="phpcov">
+  <exec executable="phpmd">
+   <arg line="--clover lib/*" />
   </exec>
  </target>
 
