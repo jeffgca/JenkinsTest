@@ -1,10 +1,14 @@
 <?php
 
 /**
- * @package HudsonTest
  * @global class written to test hudson CI stuff
+ * @package HudsonTest
  */
 
+/**
+ * Foo class
+ * @package HudsonTest
+ */
 class Foo {
     
     /**
