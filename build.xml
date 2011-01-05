@@ -19,11 +19,11 @@
  <!-- Run pdepend, phpmd, phpcpd, and phpcs in parallel -->
  <target name="parallelTasks">
   <parallel>
-   <antcall target="pdepend"/>
+   <!--<antcall target="pdepend"/>-->
    <antcall target="phpmd"/>
    <antcall target="phpcpd"/>
-   <antcall target="phpcs"/>
-   <antcall target="phpdoc"/>
+   <!--<antcall target="phpcs"/>-->
+   <!--<antcall target="phpdoc"/>-->
   </parallel>
  </target>
 
@@ -33,21 +33,21 @@
    <arg line="--jdepend-xml=${basedir}/build/logs/jdepend.xml
               --jdepend-chart=${basedir}/build/pdepend/dependencies.svg
               --overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg
-              Object" />
+              lib" />
   </exec>
  </target>
 
  <!-- Generate pmd.xml -->
  <target name="phpmd">
   <exec executable="phpmd">
-   <arg line="Object xml codesize,design,naming,unusedcode --reportfile ${basedir}/build/logs/pmd.xml" />
+   <arg line="lib xml codesize,design,naming,unusedcode --reportfile ${basedir}/build/logs/pmd.xml" />
   </exec>
  </target>
 
  <!-- Generate pmd-cpd.xml -->
  <target name="phpcpd">
   <exec executable="phpcpd">
-   <arg line="--log-pmd ${basedir}/build/logs/pmd-cpd.xml Object" />
+   <arg line="--log-pmd ${basedir}/build/logs/pmd-cpd.xml lib" />
   </exec>
  </target>
 
@@ -57,16 +57,16 @@
    <arg line="--report=checkstyle
               --report-file=${basedir}/build/logs/checkstyle.xml
               --standard=Sebastian
-              Object" />
+              lib" />
   </exec>
  </target>
 
  <!-- Generate API documentation -->
- <target name="phpdoc">
+ <!--<target name="phpdoc">
   <exec executable="phpdoc">
-   <arg line="-d Object -t build/api" />
+   <arg line="-d lib -t build/api" />
   </exec>
- </target>
+ </target>-->
 
  <target name="phpcb">
   <exec executable="phpcb">
