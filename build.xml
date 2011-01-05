@@ -14,17 +14,17 @@
  <!-- Run unit tests and generate junit.xml and clover.xml -->
  <target name="phpunit">
   <exec dir="${basedir}" executable="phpunit" failonerror="true">
-   <arg line="--configuration tests/configuration.xml tests"/>
+   <arg line="--configuration tests/configuration.xml --log-junit build/logs/junit.xml tests"/>
   </exec>
  </target>
 
  <!-- Run pdepend, phpmd, phpcpd, and phpcs in parallel -->
  <target name="parallelTasks">
   <parallel>
-   <!--<antcall target="pdepend"/>-->
+   <antcall target="pdepend"/>
    <antcall target="phpmd"/>
    <antcall target="phpcpd"/>
-   <!--<antcall target="phpcs"/>-->
+   <antcall target="phpcs"/>
    <antcall target="phpdoc"/>
   </parallel>
  </target>
