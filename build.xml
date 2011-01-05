@@ -1,0 +1,14 @@
+<project name="HudsonTest" default="build">
+
+<target name="phpunit">
+  <exec dir="${basedir}"
+        executable="phpunit"
+        failonerror="true">
+   <arg line="--log-junit _build/logs/junit.xml test"/>
+  </exec>
+ </target>
+
+
+<target name="build"
+         depends="clean,prepare, phpcpd, pdepend, phpunit, code-coverage"/>
+</project>
