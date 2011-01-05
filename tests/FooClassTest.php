@@ -1,8 +1,6 @@
 <?php
 
-$lib_dir = realpath(__DIR__ . '/../lib');
-
-require_once($lib_dir . '/FooClass.php');
+require_once('FooClass.php');
 
 class FooClassTest extends PHPUnit_Framework_TestCase {
     
