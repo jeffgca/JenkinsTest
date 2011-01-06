@@ -46,7 +46,7 @@ class FuncBarClass extends BarClass {
         
         $tableName = $this->_get_table_name();
         
-        $this->getRows($table, $limit);
+        $this->getRows($tableName, $limit);
     }
     
     /**
